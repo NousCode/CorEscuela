@@ -1,7 +1,8 @@
 namespace CoreEscuela.Entidades
 {
-    class Escuela
+    public class Escuela
     {
+        public string? UniqueId { get; set; } = Guid.NewGuid().ToString();
         string? nombre;
         public string? Nombre { 
             get { return nombre; } 
@@ -12,6 +13,8 @@ namespace CoreEscuela.Entidades
         public string? País { get; set; }
         public string? Ciudad { get; set; }
         public TiposEscuela? TipoEscuela { get; set; }
+
+        public List<Curso>? Cursos { get; set; }
         // ? Forma de construir el constructor a través de tuplas
         public Escuela(string nombre, int año) => (Nombre, AñoDeCreación) = (nombre, año);
         // * Podemos sobre escribir los métodos, pero estos deben de tener diferentes parámetros.
