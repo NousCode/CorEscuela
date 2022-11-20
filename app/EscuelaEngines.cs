@@ -2,7 +2,7 @@ using CoreEscuela.Entidades;
 
 namespace CoreEscuela
 {
-    public class EscuelaEngine
+    public sealed class EscuelaEngine
     {
 
         public Escuela Escuela { get; set; }
@@ -31,7 +31,7 @@ namespace CoreEscuela
 
                         for (int i = 0; i < 5; i++)
                         {
-                            var ev = new Evaluaciones{
+                            var ev = new Evaluacion{
                                 Asignatura = asignatura,
                                 Nombre = $"{asignatura.Nombre} Ev#{i+1}",
                                 Nota = (float)(5 * rnd.NextDouble()),
