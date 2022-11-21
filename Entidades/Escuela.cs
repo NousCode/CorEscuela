@@ -1,14 +1,7 @@
 namespace CoreEscuela.Entidades
 {
-    public class Escuela
+    public class Escuela : EscuelaBase
     {
-        public string? UniqueId { get; set; } = Guid.NewGuid().ToString();
-        string? nombre;
-        public string? Nombre { 
-            get { return nombre; } 
-            set { nombre = value?.ToUpper(); }
-        }
-
         public int? AñoDeCreación { get; set; }
         public string? País { get; set; }
         public string? Ciudad { get; set; }
