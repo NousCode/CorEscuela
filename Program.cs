@@ -9,12 +9,7 @@ engine.Inicializar();
 
 Printer.WriteTitle("Bienvenido a la Escuela");
 
-var listaObjetos = engine.GetObjetosEscuela();
-
-Printer.Beep(5);
-
-var listaILugar = from obj in listaObjetos
-                  where obj is ILugar
-                  select (ILugar) obj;
+int dummy = 0;
+var listaObjetos = engine.GetObjetosEscuela(out dummy, out int traeAlumnos);
 
 Printer.Beep(5);
